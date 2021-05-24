@@ -34,20 +34,14 @@ jobs:
           command: |
             java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
-#      - restore_cache:
-#          key: deps2-{{ checksum "requirements/dev.txt" }}
      - run:
          command: |
            python3 -m venv venv
            . venv/bin/activate
            pip install -r requirements.txt
-#      - save_cache:
-#          key: deps2-{{ checksum "requirements/dev.txt" }}
-#          paths:
-#            - 'venv'
       - run:
           command: |
-#            . venv/bin/activate
+           . venv/bin/activate
             python test.py
       - store_artifacts:
           path: test-reports/

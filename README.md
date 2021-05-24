@@ -11,4 +11,4 @@ pip install -r requirements.txt
 python test.py
 ```
 
-Configured to run on CircleCI.
+Configured to run tests on CircleCI.

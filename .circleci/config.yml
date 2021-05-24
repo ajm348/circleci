@@ -46,6 +46,7 @@ jobs:
       - store_test_results:
           path: test-reports/
   deploy:
+    executor: heroku/default
     steps:
       - checkout
       - run:

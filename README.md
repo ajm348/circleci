@@ -4,8 +4,10 @@ Recommended steps for running:
 
 ```
 python3 -m venv venv
+. venv/bin/activate
 pip install -r requirements.txt
-# run selenium (not pictured)
+# download chromedriver https://chromedriver.chromium.org/getting-started and add it to your path,
+# for example by moving it into ./venv/bin
 python test.py
 ```
 
